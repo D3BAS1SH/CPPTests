@@ -21,7 +21,10 @@ public:
 		return height;
 	}
 	long long CalculateVolume() {
-		return length * breadth * height;
+		cout << length << " " << breadth << " " << height << endl;
+		long long Vol = long(length * breadth * height);
+		cout << Vol << endl;
+		return Vol;
 	}
 
 	bool operator < (Box b) {
@@ -88,7 +91,8 @@ void check2()
 		}
 		if (type == 4)
 		{
-			cout << temp.CalculateVolume() << endl;
+			long long V = temp.CalculateVolume();
+			cout << V << endl;
 		}
 		if (type == 5)
 		{
@@ -101,8 +105,8 @@ void check2()
 
 int main()
 {
-	/*long long V = 33004122803;
-	cout << V << endl;*/
+	__int128 T=0;
+	cout << T << endl;
 	check2();
 }
 
