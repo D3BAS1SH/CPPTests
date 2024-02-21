@@ -1,17 +1,17 @@
 // CTests.cpp : This file contains the 'main' function. Program execution begins and ends there.
 //
 
-#include <iostream>
-
-using namespace std;
-
-int main()
-{
-    int a=3, b=2;
-    b = a + b;
-    b = a * b + b / 5;
-    std::cout << "Hello World!\n" << b << endl;
-}
+//#include <iostream>
+//
+//using namespace std;
+//
+//int main()
+//{
+//    int a=3, b=2;
+//    b = a + b;
+//    b = a * b + b / 5;
+//    std::cout << "Hello World!\n" << b << endl;
+//}
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
 // Debug program: F5 or Debug > Start Debugging menu
