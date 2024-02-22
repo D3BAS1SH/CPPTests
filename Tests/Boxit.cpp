@@ -1,6 +1,5 @@
 #include<iostream>
 #include<string>
-
 using namespace std;
 
 class Box {
@@ -21,10 +20,9 @@ public:
 		return height;
 	}
 	long long CalculateVolume() {
-		cout << length << " " << breadth << " " << height << endl;
-		long long Vol = long(length * breadth * height);
-		cout << Vol << endl;
-		return Vol;
+		long long V = length * breadth;
+		long long VV = V * height;
+		return VV;
 	}
 
 	bool operator < (Box b) {
@@ -40,18 +38,18 @@ public:
 		return false;
 	}
 
-	friend ostream& operator<<(ostream& os, const Box& b);
-	/*{
-		os << b.length << '/' << b.breadth << '/' << b.height;
+	friend ostream& operator<<(ostream& os, const Box& b)
+	{
+		os << b.length << ' ' << b.breadth << ' ' << b.height;
 		return os;
-	}*/
+	}
 };
 
-ostream& operator<<(ostream& os, const Box& b)
-{
-	os << b.length << ' ' << b.breadth << ' ' << b.height;
-	return os;
-}
+//ostream& operator<<(ostream& os, const Box& b)
+//{
+//	os << b.length << ' ' << b.breadth << ' ' << b.height;
+//	return os;
+//}
 
 
 void check2()
@@ -105,8 +103,6 @@ void check2()
 
 int main()
 {
-	__int128 T=0;
-	cout << T << endl;
 	check2();
 }
 
