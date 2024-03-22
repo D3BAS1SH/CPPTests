@@ -40,9 +40,12 @@ void Merge(int A[], int Left, int Mid, int Right) {
 		A[k] = *(RIGHT_AR + j);
 		j++; k++;
 	}
+
+	delete[] LEFT_AR;
+	delete[] RIGHT_AR;
 }
 
-void MergeSort(int A[], int LeftI, int RightI) {
+void MergeSort(int * A, int LeftI, int RightI) {
 	if (LeftI < RightI) {
 		int MID = LeftI + (RightI - LeftI) / 2;
 		MergeSort(A, LeftI, MID);
@@ -58,9 +61,19 @@ void printArray(int A[], int S) {
 	cout << endl;
 }
 
+void ArrayInput(int* A,int s) {
+	for (int i = 0; i < s; i++) {
+		cout << "VALUE " << i+1 << " : ";
+		cin >> *(A + i);
+	}
+}
+
 int main() {
-	int ARR[] = { 50,12,5,13 };
-	int size = sizeof(ARR) / sizeof(ARR[0]);
+	int size;
+	cout << "Size of the Array : ";
+	cin >> size;
+	int * ARR = new int[size];
+	ArrayInput(ARR,size);
 	printArray(ARR, size);
 	MergeSort(ARR, 0, size - 1);
 	printArray(ARR, size);
