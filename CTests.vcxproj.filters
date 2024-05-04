@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Tests\ReverseAnumber.cpp">
+    <ClCompile Include="Tests\TwoSum.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
